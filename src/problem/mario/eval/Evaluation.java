@@ -6,6 +6,7 @@ import agent.shapings.ConstantShaping;
 import agent.shapings.PotentialBasedShaping;
 import agent.state.QLHash;
 import problem.mario.teaching.TeachingAgent;
+import problem.mario.utils.Stats;
 import util.Util;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ public class Evaluation {
         Policy policy = new EGreedyPolicy(epsilon);
 
         TeachingAgent teacher = new TeachingAgent(policy, alpha, lambda, potential, constant, gamma);
-        teacher.loadPolicy("data/teacherS/independent/policy0");
+        teacher.loadPolicy("data/teacherS/independent_policy/policy0");
 
         ArrayList<HashMap<Long, Double>> qTable = teacher.getCmac().getWeights();
 
@@ -54,14 +55,25 @@ public class Evaluation {
                 stateQ[i] = qTable.get(i).get(val);
             }
 
-            double max = stateQ[Util.argMax(stateQ)];
-            double min = stateQ[Util.argMin(stateQ)];
+            double max = Stats.max(stateQ);
+            double min = Stats.min(stateQ);
 
             double maxmin = max - min;
 
-            if (maxmin > 0.1){
+
+            // 0.1 --- total length:522996-variance length:247766-percent:0.4737435850369793
+            // 0.2 --- total length:522996-variance length:205431-percent:0.39279650322373405
+            // 0.3 --- total length:522996-variance length:172435-percent:0.3297061545403789
+            // 0.5 --- total length:522996-variance length:140119-percent:0.2679160070057897
+            // 1   --- total length:522996-variance length:80728-percent:0.1543568210846737
+            // 1.5 --- total length:522996-variance length:60964-percent:0.11656685710789375
+            // 2   --- total length:522996-variance length:47283-percent:0.09040795723103044
+            // 3   --- total length:522996-variance length:28866-percent:0.05519353876511484
+            // 4   --- total length:522996-variance length:16785-percent:0.032093935708877315
+            // 5   --- total length:522996-variance length:9326-percent:0.01783187634322251
+            if (maxmin > 8){
                 varianceList.add(max-min);
-                System.out.println("variance:"+(max-min));
+//                System.out.println("variance:"+(max-min));
             }
 
             if (visits.get(val) > 1000){

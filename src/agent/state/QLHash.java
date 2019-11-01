@@ -91,7 +91,7 @@ public class QLHash implements Serializable {
     public int getVisits(StateAction features){
         int vi = 0;
         for(long k : features.key()) {
-            vi += visits.get(k);
+            vi += visits.getOrDefault(k, 0);
         }
         return vi;
     }

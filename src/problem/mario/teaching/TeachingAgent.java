@@ -21,7 +21,6 @@ public class TeachingAgent extends QLambdaAgent{
         this.policy = policy;
     }
 
-
     public void newEpisode(){
         prevSA = prob.getState(this);
         prevSA.setAction(chooseAction(prevSA));
@@ -95,6 +94,5 @@ public class TeachingAgent extends QLambdaAgent{
         // save Q-table : cmac
         DataOperator.saveObjectByObjectOutput(cmac, new File(filename));
     }
-
 
 }

@@ -5,23 +5,29 @@ import agent.shapings.PotentialBasedShaping;
 import agent.shapings.Shaping;
 import agent.state.StateAction;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * Superclass for all student learners.
  */
 public class Student extends TeachingAgent {
 
-	private TeachingAgent teacher; // Gives advice
-	private TeachingStrategy strategy; // Determines when advice is given
+	protected TeachingAgent teacher; // Gives advice
+	protected TeachingStrategy strategy; // Determines when advice is given
 	
 	private boolean testMode; // When set, will not explore or learn or take advice
-	private int adviceCount; // During the last episode
+	protected int adviceCount; // During the last episode
 
+	protected List<Long> advisedStateList;   // advised states
 
 	public Student(Policy policy, TeachingAgent teacher, TeachingStrategy strategy, double alpha, double lambda, PotentialBasedShaping initialization, Shaping shape, double gamma) {
 		super(policy, alpha, lambda, initialization, shape, gamma);
 		this.teacher = teacher;
 		this.strategy = strategy;
+
+//		this.advisedStateList = new ArrayList<>();
 	}
 
 
@@ -30,25 +36,35 @@ public class Student extends TeachingAgent {
 		return adviceCount;
 	}
 
+	public void newEpisode(){
+		prevSA = prob.getState(this);
+		prevSA.setAction(chooseAction(prevSA));
+		this.advisedStateList = new ArrayList<>();
+	}
+
 
 	/** Prepare for the first move. */
-	public void startEpisode() {
-		adviceCount = 0;
-
-		if (strategy.inUse(this, prevSA)) {
-			strategy.startEpisode();
-		}
-	}
+//	public void startEpisode() {
+//		adviceCount = 0;
+//
+//		if (strategy.inUse(this, prevSA)) {
+//			strategy.startEpisode();
+//		}
+//	}
 	
 	/** Choose a action, possibly with advice. */
 	public int getAction() {
 		int choice = prevSA.getAction();  // current action
-		
-		if (strategy.inUse(this, prevSA)) {
+
+		if (!advisedStateList.contains(prevSA.singleKey()) && strategy.inUse(this, prevSA)) {
 			int advice = teacher.chooseBestAction(prevSA);   // teacher's best action
+
 			if (strategy.giveAdvice(teacher, prevSA, choice, advice)) {
 				prevSA.setAction(advice);
 				adviceCount++;
+
+				// add advised states
+				advisedStateList.add(prevSA.singleKey());
 				return advice;
 			}
 		}
@@ -75,4 +91,6 @@ public class Student extends TeachingAgent {
 		
 		return data;
 	}
+
+	public int getCumReuseTimes(){return 0;}
 }

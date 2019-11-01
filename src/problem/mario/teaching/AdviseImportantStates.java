@@ -61,6 +61,11 @@ public class AdviseImportantStates extends TeachingStrategy {
 		return (left > 0);
 	}
 
+	// the asking budget still can be used
+	public boolean askBudgetInUse(){
+		return (left > 0);
+	}
+
 	
 	public double VarianceGap(double[] qvalues)
 	{

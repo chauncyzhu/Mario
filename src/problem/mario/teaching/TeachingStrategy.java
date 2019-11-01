@@ -11,6 +11,8 @@ public abstract class TeachingStrategy {
 
 	public abstract boolean inUse(TeachingAgent student, StateAction stateAction);
 
+	public abstract boolean askBudgetInUse();
+
 	public void startEpisode() {} // Override to do start-of-episode stuff
 		
 	public double[] episodeData() { // Override to add data to learning curves

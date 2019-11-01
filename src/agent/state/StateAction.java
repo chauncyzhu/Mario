@@ -48,9 +48,33 @@ public abstract class StateAction implements Serializable{
         }
         return key;
     }
+
+    public long singleKey(){
+        return key()[0];
+    }
     
     public abstract StateAction clone();
     public abstract String dataformat();
     
     public abstract StateAction newStateAction(double[] state, int action);
+
+    /**
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof StateAction) {
+            StateAction other = (StateAction) obj;
+            long[] localKey = key();
+            long[] otherKey = other.key();
+            if (localKey.length == otherKey.length){
+                for (int i=0; i<localKey.length; i++){
+                    if (localKey[i] != other.key()[i]){
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+    **/
 }
