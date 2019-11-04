@@ -92,6 +92,11 @@ public class Util {
         return best.get(RNG.randomInt(best.size()));
     }
 
+    public static int argMaxFirst(double[] v){
+        ArrayList<Integer> best = argMaxes(v);
+        return best.get(0);
+    }
+
     public static int argMax(List<Double> v){
         ArrayList<Integer> best = argMaxes(v);
         return best.get(RNG.randomInt(best.size()));

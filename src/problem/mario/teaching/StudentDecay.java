@@ -6,6 +6,8 @@ import agent.shapings.Shaping;
 import agent.state.StateAction;
 
 import java.util.*;
+
+import problem.mario.TeachingMario;
 import util.RNG;
 
 
@@ -14,6 +16,7 @@ public class StudentDecay extends Student{
 
     private int cumReuseTimes = 0;
     private double decay;   // fixed reusing times
+    private double currDecay = 0;   // fixed reusing times
 
     public StudentDecay(double decay, Policy policy, TeachingAgent teacher, TeachingStrategy strategy, double alpha, double lambda, PotentialBasedShaping initialization, Shaping shape, double gamma) {
         super(policy, teacher, strategy, alpha, lambda, initialization, shape, gamma);
@@ -36,6 +39,18 @@ public class StudentDecay extends Student{
                 int action = preAdvice.getAdvice();
                 double currProb= preAdvice.getRemainProb();
                 if (currProb > RNG.randomDouble()){
+//                    if (currEpisode == 10000){
+//                        this.currDecay = this.decay * 0.5;
+//                    }
+//
+//                    if (currEpisode == 20000){
+//                        this.currDecay = this.decay * 0.25;
+//                    }
+//
+//                    if (currEpisode == 30000){
+//                        this.currDecay = this.decay * 0.125;
+//                    }
+
                     actionReusingProb.put(key, new Advice(action, currProb * this.decay));
                     cumReuseTimes++;
                     return action;
@@ -43,7 +58,7 @@ public class StudentDecay extends Student{
             }
         }
 
-        if (!advisedStateList.contains(key) && strategy.inUse(this, prevSA)) {
+        if (currEpisode > TeachingMario.beginEpisodes && !advisedStateList.contains(key) && strategy.inUse(this, prevSA)) {
             int advice = teacher.chooseBestAction(prevSA);   // teacher's best action
 
             if (strategy.giveAdvice(teacher, prevSA, choice, advice)) {

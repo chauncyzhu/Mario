@@ -4,6 +4,7 @@ import agent.agents.Policy;
 import agent.shapings.PotentialBasedShaping;
 import agent.shapings.Shaping;
 import agent.state.StateAction;
+import problem.mario.TeachingMario;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -36,7 +37,7 @@ public class StudentQChange extends Student{
             }
         }
 
-        if (!advisedStateList.contains(key) && strategy.inUse(this, prevSA)) {
+        if (currEpisode > TeachingMario.beginEpisodes && !advisedStateList.contains(key) && strategy.inUse(this, prevSA)) {
             int advice = teacher.chooseBestAction(prevSA);   // teacher's best action
 
             if (strategy.giveAdvice(teacher, prevSA, choice, advice)) {

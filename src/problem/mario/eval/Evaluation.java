@@ -48,6 +48,7 @@ public class Evaluation {
 
         List<Double> varianceList = new ArrayList<>();
         List<Double> visitList = new ArrayList<>();
+        List<Double> probList = new ArrayList<>();
 
         for (Long val : stateActionList){
             double[] stateQ = new double[qTable.size()];
@@ -60,6 +61,8 @@ public class Evaluation {
 
             double maxmin = max - min;
 
+            double currentvar = Stats.absdeviation(stateQ, Stats.average(stateQ));
+
 
             // 0.1 --- total length:522996-variance length:247766-percent:0.4737435850369793
             // 0.2 --- total length:522996-variance length:205431-percent:0.39279650322373405
@@ -71,13 +74,20 @@ public class Evaluation {
             // 3   --- total length:522996-variance length:28866-percent:0.05519353876511484
             // 4   --- total length:522996-variance length:16785-percent:0.032093935708877315
             // 5   --- total length:522996-variance length:9326-percent:0.01783187634322251
-            if (maxmin > 8){
-                varianceList.add(max-min);
+            if (currentvar > 0.2){
 //                System.out.println("variance:"+(max-min));
             }
 
-            if (visits.get(val) > 1000){
+            if (visits.get(val) > 100){
+                varianceList.add(maxmin);
+
                 visitList.add(1.0 * visits.get(val));
+
+                int visitTimes = visits.get(val);
+                double value = Math.sqrt(visitTimes) * currentvar;
+                double prob = 1 - (Math.pow((1 + 0.2),-value));
+                probList.add(prob);
+
             }
         }
 
@@ -88,8 +98,18 @@ public class Evaluation {
         System.out.println("total length:"+stateActionList.size()+"-visit length:"+
                 visitList.size()+"-percent:"+(visitList.size()/(1.0*stateActionList.size())));
 
-        System.out.println("Max Visit:" + visitList.get(Util.argMax(visitList)) + "-Min visit:" +
+        System.out.println("Max Visit:" + visitList.get(Util.argMax(visitList)) + "-Variance:" + varianceList.get(Util.argMax(visitList)) + "-Min visit:" +
                 visitList.get(Util.argMin(visitList)));
+
+
+
+        int count = 0;
+        for (Double val: probList){
+            if (val > 0.8){
+                count++;
+            }
+        }
+        System.out.println("count:"+count);
 
     }
 }

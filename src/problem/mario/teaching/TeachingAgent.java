@@ -15,7 +15,6 @@ public class TeachingAgent extends QLambdaAgent{
     protected StateAction prevSA;
     protected Policy policy;
 
-
     public TeachingAgent(Policy policy, double alpha, double lambda, PotentialBasedShaping initialization, Shaping shape, double gamma){
         super(alpha, lambda, initialization, shape, gamma);
         this.policy = policy;
@@ -32,9 +31,8 @@ public class TeachingAgent extends QLambdaAgent{
 
 
     protected int chooseBestAction(StateAction sa){
-        return Util.argMax(getPreferences(sa));
+        return Util.argMaxFirst(getPreferences(sa));
     }
-
 
     protected double[] getPreferences(StateAction sa) {
         double[] Qs = new double[prob.getNumActions()];

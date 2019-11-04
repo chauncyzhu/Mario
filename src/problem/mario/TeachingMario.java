@@ -14,10 +14,10 @@ import java.io.File;
 public class TeachingMario {
 
     public static int REPEATS = 15; // 10 Curves to average
-    public static int TRAIN = 30000; // Train episodes
+    public static int TRAIN = 50000; // Train episodes
 
     public static String TEACHER = "teacherS"; // Teacher algorithm
-    public static String STUDENT = "decay"; // different students: studentS (default), change, budget, decay
+    public static String STUDENT = "budget"; // different students: studentS (default), change, budget, decay
     public static String STRATEGY = "adhoctd"; // baseline, advise, correct, askCorrect, adhoctd
     public static Boolean DEBUG = true; // print log info
     public static int DEBUG_LENGTH = 3000; // print log info
@@ -35,13 +35,14 @@ public class TeachingMario {
     public static int BUDGET = Integer.MAX_VALUE; // Advice budget
     public static double TQTHRESHOLD = 0;
     public static double SQTHRESHOLD = 0;
-    public static double ASKPARAME = 3;  // lower value means higher asking prob, 2 means agent asks for advice when visit times are smaller than 30
-    public static double GIVEPARAM = 1;  // higher give param means higher giving prob, 1 means give advice with prob 0.5 when visit times is 10000
+    public static double ASKPARAME = 1;  // lower value means higher asking prob, 2 means agent asks for advice when visit times are smaller than 30
+    public static double GIVEPARAM = 0.2;  // higher give param means higher giving prob, 1 means give advice with prob 0.5 when visit times is 10000
+    public static int beginEpisodes = 1;  // the episode that an agent asks for advice
 
     // params of reusing
-    public static double QTHRED = 0.001;
-    public static int REUSINGBUDGET = 3;
-    public static double DECAY = 0.65;
+    public static double QTHRED = 0;
+    public static int REUSINGBUDGET = 5;
+    public static double DECAY = 0;
 
     /*
      * Results Description
@@ -53,12 +54,16 @@ public class TeachingMario {
                     Advice Count:44859--cumReuseTimes:262815
                    Run:0--15000...30000--Episode reward:2850.0--Sum reward:1346.5374308379442
                     Advice Count:45993--cumReuseTimes:299033
+       decay-0.65: Run:0--9000...30000--Episode reward:2502.0--Sum reward:1023.5522719697811
+                    Advice Count:43957--cumReuseTimes:292110
        decay-0.7:  Run:0--9000...30000--Episode reward:1702.0--Sum reward:1065.3722919675592
                     Advice Count:43376--cumReuseTimes:332954
        decay-0.8:  Run:0--9000...30000--Episode reward:-546.0--Sum reward:1091.3549605599378
                     Advice Count:41616--cumReuseTimes:451576
      * budget-5:   Run:0--3000...30000--Episode reward:-450.0--Sum reward:924.3605464845052
                     Advice Count:35801--cumReuseTimes:150887
+       budget-3:   Run:0--24000...30000--Episode reward:2458.0--Sum reward:1468.5357276780135
+                    Advice Count:44841--cumReuseTimes:130655
      */
 
 
@@ -88,7 +93,7 @@ public class TeachingMario {
 
             // load teacher
             TeachingAgent teacher = new TeachingAgent(policy, alpha, lambda, potential, constant, gamma);
-            teacher.loadPolicy("data/"+TEACHER+"/independent_policy/policy0");
+            teacher.loadPolicy("data/"+TEACHER+"/independent/policy0");
             teacher.setProblem(prob);
 
             // load strategy
@@ -104,13 +109,16 @@ public class TeachingMario {
 
             // load student
             TeachingAgent student;
-            switch (STUDENT){
-                case "change": student = new StudentQChange(QTHRED, policy, teacher, strategy, alpha, lambda, potential, constant, gamma); break;
-                case "budget": student = new StudentReusingBudget(REUSINGBUDGET, policy, teacher, strategy, alpha, lambda, potential, constant, gamma); break;
-                case "decay": student = new StudentDecay(DECAY, policy, teacher, strategy, alpha, lambda, potential, constant, gamma); break;
-                default: student = new Student(policy, teacher, strategy, alpha, lambda, potential, constant, gamma); break;
+            if (learner.startsWith("reusingAdvice")){
+                switch (STUDENT){
+                    case "change": student = new StudentQChange(QTHRED, policy, teacher, strategy, alpha, lambda, potential, constant, gamma); break;
+                    case "budget": student = new StudentReusingBudget(REUSINGBUDGET, policy, teacher, strategy, alpha, lambda, potential, constant, gamma); break;
+                    case "decay": student = new StudentDecay(DECAY, policy, teacher, strategy, alpha, lambda, potential, constant, gamma); break;
+                    default: student = new Student(policy, teacher, strategy, alpha, lambda, potential, constant, gamma); break;
+                }
+                return student;
             }
-            return student;
+            return new Student(policy, teacher, strategy, alpha, lambda, potential, constant, gamma);
         }
         // default agent
         return new TeachingAgent(policy, alpha, lambda, potential, constant, gamma);
@@ -122,27 +130,27 @@ public class TeachingMario {
             case "teacherStudent":
             {
                 switch (STRATEGY){
-                    case "advise": return learner + "/" + STRATEGY + "_tQ_" + TQTHRESHOLD + "_";
-                    case "correct": return learner + "/" + STRATEGY + "_tQ_" + TQTHRESHOLD + "_";
-                    case "askCorrect": return learner + "/" + STRATEGY + "_tQ_" + TQTHRESHOLD + "_sQ_" + SQTHRESHOLD + "_";
-                    case "adhoctd": return learner + "/" + STRATEGY  + "_ask_" + ASKPARAME + "_give_" + GIVEPARAM + "_";
+                    case "advise": return learner + "/" + STRATEGY + "_tQ_" + TQTHRESHOLD + "_ep_" + beginEpisodes;
+                    case "correct": return learner + "/" + STRATEGY + "_tQ_" + TQTHRESHOLD + "_ep_" + beginEpisodes;
+                    case "askCorrect": return learner + "/" + STRATEGY + "_tQ_" + TQTHRESHOLD + "_sQ_" + SQTHRESHOLD + "_ep_" + beginEpisodes;
+                    case "adhoctd": return learner + "/" + STRATEGY  + "_ask_" + ASKPARAME + "_give_" + GIVEPARAM + "_ep_" + beginEpisodes;
                     default: return learner + "/" + STRATEGY;
                 }
             }
             case "reusingAdvice": {
                 String learnerName = learner;
                 switch (STUDENT){
-                    case "change": learnerName += "/change_thred_" + QTHRED; break;
-                    case "budget": learnerName += "/budget_budget_"+BUDGET; break;
-                    case "decay": learnerName += "/decay_prob_"+DECAY; break;
+                    case "change": learnerName += "/change_thred_" + QTHRED + "_"; break;
+                    case "budget": learnerName += "/budget_budget_" + REUSINGBUDGET + "_"; break;
+                    case "decay": learnerName += "/decay_prob_" + DECAY + "_"; break;
                     default: learnerName += "/"; break;
                 }
 
                 switch (STRATEGY){
-                    case "advise": return learnerName + STRATEGY + "_tQ_" + TQTHRESHOLD;
-                    case "correct": return learnerName + STRATEGY + "_tQ_" + TQTHRESHOLD;
-                    case "askCorrect": return learnerName + STRATEGY + "_tQ_" + TQTHRESHOLD + "_sQ_" + SQTHRESHOLD;
-                    case "adhoctd": return learnerName + STRATEGY  + "_ask_" + ASKPARAME + "_give_" + GIVEPARAM;
+                    case "advise": return learnerName + STRATEGY + "_tQ_" + TQTHRESHOLD + "_ep_" + beginEpisodes;
+                    case "correct": return learnerName + STRATEGY + "_tQ_" + TQTHRESHOLD + "_ep_" + beginEpisodes;
+                    case "askCorrect": return learnerName + STRATEGY + "_tQ_" + TQTHRESHOLD + "_sQ_" + SQTHRESHOLD + "_ep_" + beginEpisodes;
+                    case "adhoctd": return learnerName + STRATEGY  + "_ask_" + ASKPARAME + "_give_" + GIVEPARAM + "_ep_" + beginEpisodes;
                     default: return learnerName + STRATEGY;
                 }
             }
@@ -182,7 +190,10 @@ public class TeachingMario {
                     }
                 }
                 // record reward data
-                file.append(ep+","+results[ep]+","+Stats.sum(results)/(ep + 1)+","+((Student) marioLeaner).getAdviceCount()+"\n");
+                if (new_learner.startsWith("teacherStudent") || new_learner.startsWith("reusingAdvice"))
+                    file.append(ep+","+results[ep]+","+Stats.sum(results)/(ep + 1)+","+((Student) marioLeaner).getAdviceCount()+"\n");
+                else
+                    file.append(ep+","+results[ep]+","+Stats.sum(results)/(ep + 1)+"\n");
             }
             System.out.println("Run:" + re + "--Episode finished, sum reward:" + Stats.sum(results)/TRAIN);
 

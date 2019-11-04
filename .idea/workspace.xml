@@ -2,36 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9807ac02-9013-4161-8d2f-eebb38a34fc2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/problem/mario/teaching/AdhocTD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/problem/mario/teaching/Advice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/problem/mario/teaching/StudentDecay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/problem/mario/teaching/StudentQChange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/problem/mario/teaching/StudentReusingBudget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/problem/mario/teaching/AdhocImportance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/teacherS/independent/score0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/teacherS/teacherStudent/baseline/score0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mario/agent/state/QLHash.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/agent/state/QLHash.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mario/agent/state/StateAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/agent/state/StateAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/teacherS/independent_res/score0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/teacherS/independent_res/score1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/teacherS/independent_res/score2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/teacherS/independent_res/score3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/teacherS/independent_res/score4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/teacherS/independent_res/score5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/teacherS/independent_res/score6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/teacherS/independent_res/score7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/teacherS/independent_res/score8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/teacherS/independent_res/score9" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mario/problem/mario/TeachingMario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/problem/mario/TeachingMario.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mario/problem/mario/eval/Evaluation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/problem/mario/eval/Evaluation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/AdviseAtFirst.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/AdviseAtFirst.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/AdviseImportantStates.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/AdviseImportantStates.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/AskImportanceCorrectMistakes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/AskImportanceCorrectMistakes.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/CorrectImportantMistakes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/CorrectImportantMistakes.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/StudentDecay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/StudentDecay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/StudentQChange.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/StudentQChange.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/StudentReusingBudget.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/StudentReusingBudget.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/TeachingAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/TeachingAgent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/TeachingStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/TeachingStrategy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agent/state/QLHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agent/state/QLHash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agent/state/StateAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agent/state/StateAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mario/util/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/util/Util.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem/mario/TeachingMario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/TeachingMario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem/mario/eval/Evaluation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/eval/Evaluation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/problem/mario/teaching/AdviseAtFirst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/teaching/AdviseAtFirst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem/mario/teaching/AdhocTD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/teaching/AdhocTD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem/mario/teaching/AdviseImportantStates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/teaching/AdviseImportantStates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem/mario/teaching/AskImportanceCorrectMistakes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/teaching/AskImportanceCorrectMistakes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem/mario/teaching/CorrectImportantMistakes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/teaching/CorrectImportantMistakes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem/mario/teaching/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/teaching/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem/mario/teaching/StudentDecay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/teaching/StudentDecay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem/mario/teaching/StudentQChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/teaching/StudentQChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem/mario/teaching/StudentReusingBudget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/teaching/StudentReusingBudget.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem/mario/teaching/TeachingAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/teaching/TeachingAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/problem/mario/teaching/TeachingStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/teaching/TeachingStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Util.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,20 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/problem/mario/TeachingMario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/AdhocTD.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1416">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="1017">
+              <caret line="44" column="35" lean-forward="true" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,54 +66,77 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/StudentDecay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+            <state relative-caret-position="540">
+              <caret line="32" column="35" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2301#2302#0" expanded="true" />
-                <element signature="e#2337#2338#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/StudentReusingBudget.java">
+        <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/AdhocTD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="378">
+              <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2233#2234#0" expanded="true" />
-                <element signature="e#2269#2270#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/TeachingAgent.java">
+        <entry file="file://$PROJECT_DIR$/src/problem/mario/eval/Evaluation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="96" selection-start-line="96" selection-end-line="96" />
+            <state relative-caret-position="162">
+              <caret line="82" selection-start-line="82" selection-end-line="82" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#949#950#0" expanded="true" />
-                <element signature="e#1003#1004#0" expanded="true" />
-                <element signature="e#1285#1286#0" expanded="true" />
-                <element signature="e#1326#1327#0" expanded="true" />
-                <element signature="e#1384#1385#0" expanded="true" />
-                <element signature="e#1425#1426#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/StudentQChange.java">
+        <entry file="file://$PROJECT_DIR$/src/problem/mario/utils/Stats.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="89" column="48" selection-start-line="89" selection-start-column="48" selection-end-line="89" selection-end-column="48" />
+            <state relative-caret-position="149">
+              <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/AdhocImportance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="24" column="69" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/CorrectImportantMistakes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/Student.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -180,29 +196,30 @@
         <option value="$PROJECT_DIR$/src/agent/shapings/ConstantShaping.java" />
         <option value="$PROJECT_DIR$/src/agent/shapings/PotentialBasedShaping.java" />
         <option value="$PROJECT_DIR$/src/agent/agents/QLambdaAgent.java" />
-        <option value="$PROJECT_DIR$/src/util/Util.java" />
         <option value="$PROJECT_DIR$/src/agent/state/QLHash.java" />
-        <option value="$PROJECT_DIR$/src/problem/mario/eval/Evaluation.java" />
         <option value="$PROJECT_DIR$/src/problem/mario/teaching/TeachingStrategy.java" />
         <option value="$PROJECT_DIR$/src/problem/mario/teaching/AdviseAtFirst.java" />
-        <option value="$PROJECT_DIR$/src/problem/mario/teaching/AdviseImportantStates.java" />
-        <option value="$PROJECT_DIR$/src/problem/mario/teaching/AskImportanceCorrectMistakes.java" />
-        <option value="$PROJECT_DIR$/src/problem/mario/teaching/CorrectImportantMistakes.java" />
-        <option value="$PROJECT_DIR$/src/problem/mario/teaching/AdhocTD.java" />
         <option value="$PROJECT_DIR$/src/agent/state/StateAction.java" />
         <option value="$PROJECT_DIR$/src/problem/mario/teaching/Advice.java" />
-        <option value="$PROJECT_DIR$/src/problem/mario/teaching/StudentQChange.java" />
-        <option value="$PROJECT_DIR$/src/problem/mario/teaching/StudentDecay.java" />
-        <option value="$PROJECT_DIR$/src/problem/mario/teaching/StudentReusingBudget.java" />
-        <option value="$PROJECT_DIR$/src/problem/mario/teaching/Student.java" />
+        <option value="$PROJECT_DIR$/src/problem/mario/teaching/AskImportanceCorrectMistakes.java" />
+        <option value="$PROJECT_DIR$/src/problem/mario/teaching/AdviseImportantStates.java" />
+        <option value="$PROJECT_DIR$/src/util/Util.java" />
+        <option value="$PROJECT_DIR$/src/problem/mario/teaching/CorrectImportantMistakes.java" />
         <option value="$PROJECT_DIR$/src/problem/mario/teaching/TeachingAgent.java" />
+        <option value="$PROJECT_DIR$/src/problem/mario/teaching/Student.java" />
+        <option value="$PROJECT_DIR$/src/problem/mario/teaching/StudentDecay.java" />
+        <option value="$PROJECT_DIR$/src/problem/mario/teaching/StudentQChange.java" />
+        <option value="$PROJECT_DIR$/src/problem/mario/teaching/StudentReusingBudget.java" />
+        <option value="$PROJECT_DIR$/src/problem/mario/teaching/AdhocImportance.java" />
+        <option value="$PROJECT_DIR$/src/problem/mario/eval/Evaluation.java" />
+        <option value="$PROJECT_DIR$/src/problem/mario/teaching/AdhocTD.java" />
         <option value="$PROJECT_DIR$/src/problem/mario/TeachingMario.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="x" value="315" />
+    <option name="y" value="89" />
     <option name="width" value="1375" />
     <option name="height" value="876" />
   </component>
@@ -241,19 +258,6 @@
               <item name="Mario" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mario" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mario" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mario" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="agent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mario" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mario" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="agent" type="462c0819:PsiDirectoryNode" />
-              <item name="agents" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Mario" type="b2602c69:ProjectViewProjectNode" />
@@ -308,6 +312,9 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="problem.mario.teaching" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data/teacherS/teacherStudent/old" />
       <recent name="$PROJECT_DIR$/src/problem/mario/teaching" />
@@ -402,12 +409,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572271971465</updated>
-      <workItem from="1572271975000" duration="107265000" />
+      <workItem from="1572271975000" duration="150233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107265000" />
+    <option name="totallyTimeSpent" value="150233000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -417,7 +424,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18176764" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1545303" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" weight="0.25689086" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -427,8 +434,8 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3296582" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34619626" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.43991178" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39911798" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -447,31 +454,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/teacherS/independent_policy/score0">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/agent/shapings/ConstantShaping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-            <element signature="e#625#626#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/utils/DataFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1668">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/problem/mario/utils/DataOperator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -532,19 +514,19 @@
     <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/askCorrect_1.0_1.0/score0">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/askCorrect_1.0_0.5/score0">
+    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent_old/askCorrect_1.0_0.5/score0">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/correct_1.0_4.0/score0">
+    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent_old/correct_1.0_4.0/score0">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-809609" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/askCorrect_4.0_1.0/score0">
+    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent_old/askCorrect_4.0_1.0/score0">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-244910" />
       </provider>
@@ -561,46 +543,36 @@
         <state relative-caret-position="-461420" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/adhoctd_4.0_0.1_0.1_2.0/score6">
+    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent_old/adhoctd_4.0_0.1_0.1_2.0/score6">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/adhoctd_4.0_0.1_0.1_2.0/score5">
+    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent_old/adhoctd_4.0_0.1_0.1_2.0/score5">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/adhoctd_4.0_0.1_0.1_2.0/score4">
+    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent_old/adhoctd_4.0_0.1_0.1_2.0/score4">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/adhoctd_4.0_0.1_0.1_2.0/score3">
+    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent_old/adhoctd_4.0_0.1_0.1_2.0/score3">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-809671" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/adhoctd_4.0_0.1_0.1_2.0/score2">
+    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent_old/adhoctd_4.0_0.1_0.1_2.0/score2">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-809671" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/adhoctd_4.0_0.1_0.1_2.0/score1">
+    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent_old/adhoctd_4.0_0.1_0.1_2.0/score1">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-809671" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/adhoctd_4.0_0.1_0.1_2.0/score0">
+    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent_old/adhoctd_4.0_0.1_0.1_2.0/score0">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-809671" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/utils/Stats.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/askCorrect_1.0_4.0/score0">
+    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent_old/askCorrect_1.0_4.0/score0">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-419752">
           <caret line="6000" column="12" lean-forward="true" selection-start-line="6000" selection-end-line="6001" />
@@ -614,59 +586,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/askCorrect_4.0_0.1/score0">
+    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent_old/askCorrect_4.0_0.1/score0">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/eval/Evaluation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/askCorrect_4.0_2.0_0.0_0.0/score0">
+    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent_old/askCorrect_4.0_2.0_0.0_0.0/score0">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/old/adhoctd_0.0_0.0_1.5_1.0/score0">
+    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent_old/old/adhoctd_0.0_0.0_1.5_1.0/score0">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/AskImportanceCorrectMistakes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#902#903#0" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/CorrectImportantMistakes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-            <element signature="e#1204#1205#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/MarioStateAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="72" column="32" lean-forward="true" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
-          <folding>
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/AdviseAtFirst.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -687,16 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/AdviseImportantStates.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="63" selection-start-line="63" selection-end-line="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/agent/state/QLHash.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -713,41 +630,6 @@
             <element signature="e#2835#2836#0" expanded="true" />
             <element signature="e#3258#3259#0" expanded="true" />
             <element signature="e#3330#3331#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/Advice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#528#529#0" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#170#171#0" expanded="true" />
-            <element signature="e#199#200#0" expanded="true" />
-            <element signature="e#240#241#0" expanded="true" />
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#516#517#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#612#613#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1107">
-          <caret line="68" column="9" lean-forward="true" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -784,10 +666,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent_old/adhoctd_0.0_0.0_3.0_1.0/score0">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="9000" column="8" lean-forward="true" selection-start-line="9000" selection-end-line="9001" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2518" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="94" column="33" selection-start-line="94" selection-start-column="22" selection-end-line="94" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/MarioStateAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="63" column="40" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="40" />
+          <folding>
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#449#450#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/agent/state/StateAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-733">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        <state relative-caret-position="333">
+          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
           <folding>
             <element signature="e#378#379#0" expanded="true" />
             <element signature="e#419#420#0" expanded="true" />
@@ -799,43 +714,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/AskImportanceCorrectMistakes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/AdviseImportantStates.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1512">
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/Advice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/TeachingAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        <state relative-caret-position="202">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#949#950#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#1285#1286#0" expanded="true" />
-            <element signature="e#1326#1327#0" expanded="true" />
-            <element signature="e#1384#1385#0" expanded="true" />
-            <element signature="e#1425#1426#0" expanded="true" />
+            <element signature="e#948#949#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/adhoctd_0.0_0.0_3.0_1.0/score0">
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/StudentReusingBudget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="9000" column="8" lean-forward="true" selection-start-line="9000" selection-end-line="9001" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1491">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/AdhocTD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1416">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="66">
+          <caret line="44" column="54" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -844,42 +765,92 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/StudentQChange.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="89" column="48" selection-start-line="89" selection-start-column="48" selection-end-line="89" selection-end-column="48" />
+        <state relative-caret-position="54">
+          <caret line="39" column="57" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/StudentReusingBudget.java">
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/CorrectImportantMistakes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="191">
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2233#2234#0" expanded="true" />
-            <element signature="e#2269#2270#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/AdhocImportance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="24" column="69" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/utils/Stats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/eval/Evaluation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/StudentDecay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+        <state relative-caret-position="540">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2301#2302#0" expanded="true" />
-            <element signature="e#2337#2338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/teacherS/independent/score0">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="49999" column="16" selection-start-line="49999" selection-start-column="12" selection-end-line="49999" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/AdhocTD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/problem/mario/TeachingMario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+        <state relative-caret-position="1017">
+          <caret line="44" column="35" lean-forward="true" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

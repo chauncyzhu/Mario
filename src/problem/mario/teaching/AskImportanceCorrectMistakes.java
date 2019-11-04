@@ -20,7 +20,7 @@ public class AskImportanceCorrectMistakes extends CorrectImportantMistakes{
         double[] qvalues = student.getQs(stateAction);
         double gap = Stats.max(qvalues) - Stats.min(qvalues);
 
-        if (left > 0 && gap < t_stu){
+        if (left > 0 && gap > t_stu){
             return true;
         }
 

@@ -24,7 +24,7 @@ public class AdviseImportantStates extends TeachingStrategy {
 	public boolean giveAdvice(TeachingAgent teacher, StateAction stateAction, int _choice, int _advice) {
 		
 		
-		boolean UseVariance = false;
+		boolean UseVariance = true;
 		
 		double[] qvalues = teacher.getQs(stateAction);
 		double gap;

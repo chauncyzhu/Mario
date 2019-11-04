@@ -4,6 +4,7 @@ import agent.agents.Policy;
 import agent.shapings.PotentialBasedShaping;
 import agent.shapings.Shaping;
 import agent.state.StateAction;
+import problem.mario.TeachingMario;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,8 @@ public class Student extends TeachingAgent {
 	protected int adviceCount; // During the last episode
 
 	protected List<Long> advisedStateList;   // advised states
+
+	protected int currEpisode = 0;
 
 	public Student(Policy policy, TeachingAgent teacher, TeachingStrategy strategy, double alpha, double lambda, PotentialBasedShaping initialization, Shaping shape, double gamma) {
 		super(policy, alpha, lambda, initialization, shape, gamma);
@@ -40,6 +43,7 @@ public class Student extends TeachingAgent {
 		prevSA = prob.getState(this);
 		prevSA.setAction(chooseAction(prevSA));
 		this.advisedStateList = new ArrayList<>();
+		currEpisode++;
 	}
 
 
@@ -56,7 +60,7 @@ public class Student extends TeachingAgent {
 	public int getAction() {
 		int choice = prevSA.getAction();  // current action
 
-		if (!advisedStateList.contains(prevSA.singleKey()) && strategy.inUse(this, prevSA)) {
+		if (currEpisode > TeachingMario.beginEpisodes && !advisedStateList.contains(prevSA.singleKey()) && strategy.inUse(this, prevSA)) {
 			int advice = teacher.chooseBestAction(prevSA);   // teacher's best action
 
 			if (strategy.giveAdvice(teacher, prevSA, choice, advice)) {

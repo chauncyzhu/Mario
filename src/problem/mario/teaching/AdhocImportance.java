@@ -1,16 +1,16 @@
 package problem.mario.teaching;
 
-import util.RNG;
 import agent.state.StateAction;
 import problem.mario.TeachingMario;
 import problem.mario.utils.Stats;
+import util.RNG;
 
-public class AdhocTD extends TeachingStrategy {
+public class AdhocImportance extends TeachingStrategy {
     protected int left; // Advice to give
     protected double askParam;
     protected double giveParam;
 
-    public AdhocTD(double askParam, double giveParam) {
+    public AdhocImportance(double askParam, double giveParam) {
         left = TeachingMario.BUDGET;
         this.askParam = askParam;
         this.giveParam = giveParam;
@@ -19,24 +19,16 @@ public class AdhocTD extends TeachingStrategy {
     /** When the state has widely varying Q-values, and the student doesn't take the advice action. */
     public boolean giveAdvice(TeachingAgent teacher, StateAction stateAction, int choice, int advice) {
 
-        if (choice != advice){
-            double[] qvalues = teacher.getQs(stateAction);
-            double gap = Math.abs(Stats.max(qvalues) - Stats.min(qvalues));
-            double currentvar = Stats.absdeviation(qvalues, Stats.average(qvalues));
+        double[] qvalues = teacher.getQs(stateAction);
+        double gap = Stats.max(qvalues) - Stats.min(qvalues);
+        double absdeviation = Stats.absdeviation(qvalues, Stats.average(qvalues));
+        boolean important = (absdeviation > TeachingMario.TQTHRESHOLD);
 
-            // the number of times teacher visits the state
-            int visitTimes = teacher.getCmac().getVisits(stateAction);
-            double value = Math.sqrt(visitTimes) * gap;
-            double prob = 1 - (Math.pow((1 + giveParam),-value));
-
-            boolean important = (prob > RNG.randomDouble());
-
-            if (important) {
+        if (important) {
 //            boolean mistake = (choice != advice);
 //            if (mistake) {
-                left--;
-                return true;
-            }
+            left--;
+            return true;
         }
 
         return false;
