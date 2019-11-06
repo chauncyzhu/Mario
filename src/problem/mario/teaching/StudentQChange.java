@@ -86,7 +86,7 @@ public class StudentQChange extends Student{
         double qChange = newQ - currQ;
 
         if (this.isAdvised && !actionReusing.get(key).isqReuse()){   // need to be evaluated when false
-            if (qChange > this.qThred){
+            if (qChange >= this.qThred){
 //                System.out.println("Reuse currQ:"+currQ+"-newQ:"+newQ+"-qChange:"+qChange);
 //                System.out.println("cumReuseTimes:"+cumReuseTimes);
                 actionReusing.put(key, new Advice(previous.getAction(), true));

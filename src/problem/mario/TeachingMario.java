@@ -13,12 +13,12 @@ import java.io.File;
 
 public class TeachingMario {
 
-    public static int REPEATS = 15; // 10 Curves to average
+    public static int REPEATS = 30; // 10 Curves to average
     public static int TRAIN = 50000; // Train episodes
 
-    public static String TEACHER = "teacherS"; // Teacher algorithm
-    public static String STUDENT = "budget"; // different students: studentS (default), change, budget, decay
-    public static String STRATEGY = "adhoctd"; // baseline, advise, correct, askCorrect, adhoctd
+    public static String TEACHER = "teacherS";  // Teacher algorithm
+    public static String STUDENT = "decay";  // different students: studentS (default), change, budget, decay
+    public static String STRATEGY = "adhoctd";  // baseline, advise, correct, askCorrect, adhoctd
     public static Boolean DEBUG = true; // print log info
     public static int DEBUG_LENGTH = 3000; // print log info
     public static String DIR = "data/"+TEACHER; // Where to store data
@@ -35,14 +35,14 @@ public class TeachingMario {
     public static int BUDGET = Integer.MAX_VALUE; // Advice budget
     public static double TQTHRESHOLD = 0;
     public static double SQTHRESHOLD = 0;
-    public static double ASKPARAME = 1;  // lower value means higher asking prob, 2 means agent asks for advice when visit times are smaller than 30
+    public static double ASKPARAME = 2;  // lower value means higher asking prob, 2 means agent asks for advice when visit times are smaller than 30
     public static double GIVEPARAM = 0.2;  // higher give param means higher giving prob, 1 means give advice with prob 0.5 when visit times is 10000
-    public static int beginEpisodes = 1;  // the episode that an agent asks for advice
+    public static int beginEpisodes = 0;  // the episode that an agent asks for advice
 
     // params of reusing
     public static double QTHRED = 0;
-    public static int REUSINGBUDGET = 5;
-    public static double DECAY = 0;
+    public static int REUSINGBUDGET = 0;
+    public static double DECAY = 0.8;
 
     /*
      * Results Description
