@@ -9,10 +9,7 @@ import problem.mario.teaching.TeachingAgent;
 import problem.mario.utils.Stats;
 import util.Util;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Evaluation {
     public static void main(String[] args){
@@ -27,7 +24,7 @@ public class Evaluation {
         Policy policy = new EGreedyPolicy(epsilon);
 
         TeachingAgent teacher = new TeachingAgent(policy, alpha, lambda, potential, constant, gamma);
-        teacher.loadPolicy("data/teacherS/independent_policy/policy0");
+        teacher.loadPolicy("data/teacherS/independent/policy0");
 
         ArrayList<HashMap<Long, Double>> qTable = teacher.getCmac().getWeights();
 
@@ -46,9 +43,8 @@ public class Evaluation {
             }
         }
 
-        List<Double> varianceList = new ArrayList<>();
-        List<Double> visitList = new ArrayList<>();
-        List<Double> probList = new ArrayList<>();
+        List<Double> maxminList = new ArrayList<>();
+        List<Integer> visitList = new ArrayList<>();
 
         for (Long val : stateActionList){
             double[] stateQ = new double[qTable.size()];
@@ -63,7 +59,6 @@ public class Evaluation {
 
             double currentvar = Stats.absdeviation(stateQ, Stats.average(stateQ));
 
-
             // 0.1 --- total length:522996-variance length:247766-percent:0.4737435850369793
             // 0.2 --- total length:522996-variance length:205431-percent:0.39279650322373405
             // 0.3 --- total length:522996-variance length:172435-percent:0.3297061545403789
@@ -74,42 +69,42 @@ public class Evaluation {
             // 3   --- total length:522996-variance length:28866-percent:0.05519353876511484
             // 4   --- total length:522996-variance length:16785-percent:0.032093935708877315
             // 5   --- total length:522996-variance length:9326-percent:0.01783187634322251
-            if (currentvar > 0.2){
-//                System.out.println("variance:"+(max-min));
-            }
 
-            if (visits.get(val) > 100){
-                varianceList.add(maxmin);
+            maxminList.add(maxmin);
+            visitList.add(visits.get(val));
 
-                visitList.add(1.0 * visits.get(val));
+        }
 
-                int visitTimes = visits.get(val);
-                double value = Math.sqrt(visitTimes) * currentvar;
-                double prob = 1 - (Math.pow((1 + 0.2),-value));
+        Map<Double, List<Double>> proMap = new HashMap<>();
+        for (int i=0; i<=10; i++){
+            double giveParam = i*0.1;
+            List<Double> probList = new ArrayList<>();
+            for (int j=0; j<visitList.size();j++){
+                int visitTimes = visitList.get(j);
+                double maxmin = maxminList.get(j);
+                double value = Math.sqrt(visitTimes) * maxmin;
+                double prob = 1 - (Math.pow((1 + giveParam),-value));
                 probList.add(prob);
-
             }
+            proMap.put(giveParam, probList);
         }
 
-        System.out.println("total length:"+stateActionList.size()+"-variance length:"+
-                varianceList.size()+"-percent:"+(varianceList.size()/(1.0*stateActionList.size())));
+        /**
+         * count the number of prob > a
+         */
 
-
-        System.out.println("total length:"+stateActionList.size()+"-visit length:"+
-                visitList.size()+"-percent:"+(visitList.size()/(1.0*stateActionList.size())));
-
-        System.out.println("Max Visit:" + visitList.get(Util.argMax(visitList)) + "-Variance:" + varianceList.get(Util.argMax(visitList)) + "-Min visit:" +
-                visitList.get(Util.argMin(visitList)));
-
-
-
-        int count = 0;
-        for (Double val: probList){
-            if (val > 0.8){
-                count++;
+        for (Map.Entry<Double, List<Double>> entry:proMap.entrySet()){
+            int[] count = new int[10];
+            for (int i=0; i<=10; i++){
+                double currProb = i*0.1;
+                for (Double val : entry.getValue()){
+                    if (val > currProb)
+                        count[i]++;
+                }
             }
+            System.out.println("GiveParam:"+entry.getKey()+ Arrays.toString(count));
         }
-        System.out.println("count:"+count);
-
     }
+
+
 }

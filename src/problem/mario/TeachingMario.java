@@ -17,7 +17,7 @@ public class TeachingMario {
     public static int TRAIN = 50000; // Train episodes
 
     public static String TEACHER = "teacherS";  // Teacher algorithm
-    public static String STUDENT = "decay";  // different students: studentS (default), change, budget, decay
+    public static String STUDENT = "change";  // different students: studentS (default), change, budget, decay
     public static String STRATEGY = "adhoctd";  // baseline, advise, correct, askCorrect, adhoctd
     public static Boolean DEBUG = true; // print log info
     public static int DEBUG_LENGTH = 3000; // print log info
@@ -42,7 +42,7 @@ public class TeachingMario {
     // params of reusing
     public static double QTHRED = 0;
     public static int REUSINGBUDGET = 0;
-    public static double DECAY = 0.8;
+    public static double DECAY = 0;
 
     /*
      * Results Description
@@ -163,7 +163,7 @@ public class TeachingMario {
     /** Generate learning curves. */
     public static void train(String learner, int start) {
         // Begin new curves
-        for (int re=start; re<REPEATS; re++) {
+        for (int re=start; re<(REPEATS+start); re++) {
             System.out.println("Training "+DIR+"/"+learner+" " + re + "...");
             // create data directory
             String new_learner = getLearnerName(learner);
