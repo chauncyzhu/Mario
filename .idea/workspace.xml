@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9807ac02-9013-4161-8d2f-eebb38a34fc2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mario/problem/mario/TeachingMario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/problem/mario/TeachingMario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/CorrectImportantMistakes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/CorrectImportantMistakes.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem/mario/TeachingMario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/TeachingMario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/problem/mario/eval/Evaluation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/eval/Evaluation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/problem/mario/teaching/StudentQChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/teaching/StudentQChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem/mario/teaching/CorrectImportantMistakes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/teaching/CorrectImportantMistakes.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,16 +16,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/problem/mario/TeachingMario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+            <state relative-caret-position="81">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,10 +33,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/StudentQChange.java">
+        <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/AskImportanceCorrectMistakes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
+            <state relative-caret-position="108">
+              <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,64 +45,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/StudentDecay.java">
+        <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/CorrectImportantMistakes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/Student.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="98" column="23" selection-start-line="98" selection-end-line="99" />
+            <state relative-caret-position="594">
+              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/StudentReusingBudget.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="62" column="30" selection-start-line="62" selection-end-line="65" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/problem/mario/eval/Evaluation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/agent/state/TileCoding.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="18" column="27" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/problem/mario/ch/idsia/benchmark/mario/environments/MarioEnvironment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="397" column="12" selection-start-line="397" selection-start-column="12" selection-end-line="397" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -109,7 +59,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/problem/mario/ch/idsia/benchmark/mario/engine/LevelScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
+            <state relative-caret-position="1296">
               <caret line="87" column="21" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="21" />
               <folding>
                 <element signature="e#14232#14233#0" expanded="true" />
@@ -122,7 +72,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/problem/mario/ch/idsia/benchmark/mario/engine/sprites/Mario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11384">
+            <state relative-caret-position="21951">
               <caret line="847" column="11" selection-start-line="847" selection-start-column="11" selection-end-line="847" selection-end-column="11" />
               <folding>
                 <element signature="e#22290#22291#0" expanded="true" />
@@ -195,7 +145,6 @@
         <option value="$PROJECT_DIR$/src/problem/mario/teaching/AskImportanceCorrectMistakes.java" />
         <option value="$PROJECT_DIR$/src/problem/mario/teaching/AdviseImportantStates.java" />
         <option value="$PROJECT_DIR$/src/util/Util.java" />
-        <option value="$PROJECT_DIR$/src/problem/mario/teaching/CorrectImportantMistakes.java" />
         <option value="$PROJECT_DIR$/src/problem/mario/teaching/TeachingAgent.java" />
         <option value="$PROJECT_DIR$/src/problem/mario/teaching/Student.java" />
         <option value="$PROJECT_DIR$/src/problem/mario/teaching/StudentDecay.java" />
@@ -204,6 +153,7 @@
         <option value="$PROJECT_DIR$/src/problem/mario/teaching/AdhocTD.java" />
         <option value="$PROJECT_DIR$/src/problem/mario/eval/Evaluation.java" />
         <option value="$PROJECT_DIR$/src/problem/mario/teaching/StudentQChange.java" />
+        <option value="$PROJECT_DIR$/src/problem/mario/teaching/CorrectImportantMistakes.java" />
         <option value="$PROJECT_DIR$/src/problem/mario/TeachingMario.java" />
       </list>
     </option>
@@ -220,6 +170,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -230,31 +182,6 @@
             <path>
               <item name="Mario" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mario" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mario" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mario" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="teacherS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mario" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mario" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="teacherS" type="462c0819:PsiDirectoryNode" />
-              <item name="independent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mario" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mario" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="teacherS" type="462c0819:PsiDirectoryNode" />
-              <item name="reusingAdvice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mario" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mario" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -262,63 +189,11 @@
               <item name="Mario" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="agent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mario" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mario" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="agent" type="462c0819:PsiDirectoryNode" />
-              <item name="state" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mario" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mario" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="problem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mario" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mario" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="problem" type="462c0819:PsiDirectoryNode" />
-              <item name="mario" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mario" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mario" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="problem" type="462c0819:PsiDirectoryNode" />
-              <item name="mario" type="462c0819:PsiDirectoryNode" />
-              <item name="eval" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mario" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mario" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="problem" type="462c0819:PsiDirectoryNode" />
-              <item name="mario" type="462c0819:PsiDirectoryNode" />
-              <item name="teaching" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mario" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mario" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="problem" type="462c0819:PsiDirectoryNode" />
-              <item name="mario" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mario" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mario" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -428,45 +303,47 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572271971465</updated>
-      <workItem from="1572271975000" duration="178172000" />
+      <workItem from="1572271975000" duration="179864000" />
+      <workItem from="1573394044537" duration="17762000" />
+      <workItem from="1573802968500" duration="270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178172000" />
+    <option name="totallyTimeSpent" value="197896000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13007227" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18510284" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" weight="0.25689086" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.3296582" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3296582" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2899669" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25248072" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39911798" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3296582" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.25689086" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,11 +362,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/adhoctd_0.0_0.0/score0">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-461420" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent/adhoctd_0.0_0.0/score0" />
     <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent_old/adhoctd_4.0_0.1_0.1_2.0/score6">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -526,13 +399,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/teacherS/independent_res/score0">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="6000" column="10" selection-start-line="6000" selection-end-line="6001" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/teacherS/independent_res/score0" />
     <entry file="file://$PROJECT_DIR$/data/teacherS/teacherStudent_old/askCorrect_4.0_0.1/score0">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -551,13 +418,6 @@
             <element signature="e#668#669#0" expanded="true" />
             <element signature="e#692#693#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/TeachingStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="35" selection-start-line="13" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -661,16 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/AskImportanceCorrectMistakes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/AdviseImportantStates.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1512">
@@ -696,16 +546,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#948#949#0" expanded="true" />
             <element signature="e#1007#1008#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/CorrectImportantMistakes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -783,38 +623,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/ch/idsia/benchmark/mario/engine/sprites/Mario.java">
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/StudentQChange.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11384">
-          <caret line="847" column="11" selection-start-line="847" selection-start-column="11" selection-end-line="847" selection-end-column="11" />
+        <state relative-caret-position="2187">
+          <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
           <folding>
-            <element signature="e#22290#22291#0" expanded="true" />
-            <element signature="e#22311#22312#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/ch/idsia/benchmark/mario/environments/MarioEnvironment.java">
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/StudentReusingBudget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="397" column="12" selection-start-line="397" selection-start-column="12" selection-end-line="397" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/ch/idsia/benchmark/mario/engine/LevelScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="87" column="21" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="21" />
+        <state relative-caret-position="1485">
+          <caret line="62" column="30" selection-start-line="62" selection-end-line="65" />
           <folding>
-            <element signature="e#14232#14233#0" expanded="true" />
-            <element signature="e#14290#14291#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/problem/mario/eval/Evaluation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
+        <state relative-caret-position="297">
           <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -824,28 +655,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/agent/state/TileCoding.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="405">
           <caret line="18" column="27" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/Student.java">
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/ch/idsia/benchmark/mario/environments/MarioEnvironment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="98" column="23" selection-start-line="98" selection-end-line="99" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/StudentReusingBudget.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="62" column="30" selection-start-line="62" selection-end-line="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="9288">
+          <caret line="397" column="12" selection-start-line="397" selection-start-column="12" selection-end-line="397" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -856,10 +674,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/StudentQChange.java">
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/TeachingStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
+        <state relative-caret-position="243">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -868,10 +693,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/problem/mario/TeachingMario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+        <state relative-caret-position="81">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/AskImportanceCorrectMistakes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/teaching/CorrectImportantMistakes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/ch/idsia/benchmark/mario/engine/LevelScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1296">
+          <caret line="87" column="21" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="21" />
+          <folding>
+            <element signature="e#14232#14233#0" expanded="true" />
+            <element signature="e#14290#14291#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problem/mario/ch/idsia/benchmark/mario/engine/sprites/Mario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21951">
+          <caret line="847" column="11" selection-start-line="847" selection-start-column="11" selection-end-line="847" selection-end-column="11" />
+          <folding>
+            <element signature="e#22290#22291#0" expanded="true" />
+            <element signature="e#22311#22312#0" expanded="true" />
           </folding>
         </state>
       </provider>

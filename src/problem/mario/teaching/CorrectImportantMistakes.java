@@ -23,7 +23,7 @@ public class CorrectImportantMistakes extends TeachingStrategy {
 		double[] qvalues = teacher.getQs(stateAction);
 		double gap = Stats.max(qvalues) - Stats.min(qvalues);
 		double absdeviation = Stats.absdeviation(qvalues, Stats.average(qvalues));
-		boolean important = (absdeviation > threshold);
+		boolean important = (gap > threshold);
 
 		if (important) {
 			boolean mistake = (choice != advice);
