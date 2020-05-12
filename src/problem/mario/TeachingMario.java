@@ -9,6 +9,8 @@ import problem.mario.teaching.*;
 import problem.mario.utils.DataFile;
 import problem.mario.utils.Stats;
 
+import org.apache.commons.cli.*;
+
 import java.io.File;
 
 public class TeachingMario {
@@ -16,8 +18,11 @@ public class TeachingMario {
     public static int REPEATS = 30; // 10 Curves to average
     public static int TRAIN = 50000; // Train episodes
 
+    // independent will simply use independent learners whatever the STUDENT and STRATEGY are assigned.
+    // teacherStudent will use STRATEGY rather than STUDENT
+    // reusingAdvice will consider STRATEGY and STUDENT together.
     public static String TEACHER = "teacherS";  // Teacher algorithm
-    public static String STUDENT = "decay";  // different students: studentS (default), change, budget, decay
+    public static String STUDENT;  // different students: studentS (default), change, budget, decay
     public static String STRATEGY = "adhoctd";  // baseline, advise, correct, askCorrect, adhoctd
     public static Boolean DEBUG = true; // print log info
     public static int DEBUG_LENGTH = 3000; // print log info
@@ -40,7 +45,7 @@ public class TeachingMario {
     public static int beginEpisodes = 0;  // the episode that an agent asks for advice
 
     // params of reusing
-    public static double QTHRED = 0;
+    public static double QTHRED = 0.03;
     public static int REUSINGBUDGET = 0;
     public static double DECAY = 0.9;
 
@@ -70,11 +75,67 @@ public class TeachingMario {
     /**
      * Run experiments.
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
+        // Create a Parser
+        CommandLineParser parser = new DefaultParser();
+        Options options = new Options( );
+
+        /* Set the appropriate variables based on supplied options
+        -m: running mode
+        -s: student strategy. must be set when m = "r"
+         */
+        options.addOption("m", "mode", true, "experiment mode");
+        options.addOption("s", "student", true, "student strategy");
+        options.addOption("t", "start", true, "start time");
+
+        // Parse the program arguments
+        CommandLine commandLine = parser.parse( options, args );
+        String mode = "";
+        if( commandLine.hasOption('m') ) {
+            mode = commandLine.getOptionValue("m");
+        }else{
+            System.exit(0);
+        }
+
+        // start time
+        int startTime = 0;
+        if( commandLine.hasOption("t") ) {
+            startTime = Integer.parseInt(commandLine.getOptionValue("t"));
+        }
+
         // independent, teacherStudent, reusingAdvice
-        train("reusingAdvice", 0);
+        System.out.println("Mode:"+mode+"-Start:"+startTime);
+        switch (mode) {
+            case "i": train("independent", startTime); break;
+            case "t": train("teacherStudent", startTime); break;
+            case "r": {
+                String student = "";
+                if( commandLine.hasOption('s') ) {
+                    student = commandLine.getOptionValue("s");
+                }else{
+                    System.exit(0);
+                }
+                System.out.println("Student:"+student);
+                switch (student) {
+                    case "ch": STUDENT = "change"; break;
+                    case "bu": STUDENT = "budget"; break;
+                    case "de": STUDENT = "decay"; break;
+                    case "deM": STUDENT = "margin"; break;
+                    case "deQ": STUDENT = "qChange"; break;
+                    default: STUDENT = "studentS"; break;
+                }
+                train("reusingAdvice", startTime);
+            } break;
+            default: train("independent", startTime); break;
+        }
 
     }
+
+
+//    public static void main(String[] args) {
+//        STUDENT = "qChange";  // studentS, change, budget, decay, margin, qChange
+//        train("reusingAdvice", 0);  // independent, teacherStudent, reusingAdvice
+//    }
 
 
     /** Set up a learner. */
@@ -93,7 +154,7 @@ public class TeachingMario {
 
             // load teacher
             TeachingAgent teacher = new TeachingAgent(policy, alpha, lambda, potential, constant, gamma);
-            teacher.loadPolicy("data/"+TEACHER+"/independent/policy0");
+            teacher.loadPolicy(DIR+"/independent/policy0");
             teacher.setProblem(prob);
 
             // load strategy
@@ -114,6 +175,8 @@ public class TeachingMario {
                     case "change": student = new StudentQChange(QTHRED, policy, teacher, strategy, alpha, lambda, potential, constant, gamma); break;
                     case "budget": student = new StudentReusingBudget(REUSINGBUDGET, policy, teacher, strategy, alpha, lambda, potential, constant, gamma); break;
                     case "decay": student = new StudentDecay(DECAY, policy, teacher, strategy, alpha, lambda, potential, constant, gamma); break;
+                    case "margin": student = new StudentDecayMargin(DECAY, policy, teacher, strategy, alpha, lambda, potential, constant, gamma); break;
+                    case "qChange": student = new StudentDecayQChange(DECAY, QTHRED, policy, teacher, strategy, alpha, lambda, potential, constant, gamma); break;
                     default: student = new Student(policy, teacher, strategy, alpha, lambda, potential, constant, gamma); break;
                 }
                 return student;
@@ -143,6 +206,8 @@ public class TeachingMario {
                     case "change": learnerName += "/change_thred_" + QTHRED + "_"; break;
                     case "budget": learnerName += "/budget_budget_" + REUSINGBUDGET + "_"; break;
                     case "decay": learnerName += "/decay_prob_" + DECAY + "_"; break;
+                    case "margin": learnerName += "/decay_margin_" + DECAY + "_"; break;
+                    case "qChange": learnerName += "/decay_qChange_" + DECAY + "_" + QTHRED + "_"; break;
                     default: learnerName += "/"; break;
                 }
 

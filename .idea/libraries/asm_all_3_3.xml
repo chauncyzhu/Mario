@@ -1,18 +1,17 @@
 <component name="libraryTable">
   <library name="asm-all-3.3">
     <CLASSES>
-      <root url="jar://$USER_HOME$/chauncy/coding/java/lib/lib/asm-all-3.3.jar!/" />
-      <root url="jar://$USER_HOME$/chauncy/coding/java/lib/lib/fastutil-7.0.9.jar!/" />
-      <root url="jar://$USER_HOME$/chauncy/coding/java/lib/lib/jdom.jar!/" />
-      <root url="jar://$USER_HOME$/chauncy/coding/java/lib/lib/junit-4.8.2.jar!/" />
-      <root url="jar://$USER_HOME$/chauncy/coding/java/lib/lib/rlpark.jar!/" />
-      <root url="jar://$USER_HOME$/chauncy/coding/java/lib/lib/testng-6.8.7.jar!/" />
-      <root url="jar://$USER_HOME$/chauncy/coding/java/lib/lib/weka.jar!/" />
-      <root url="jar://$USER_HOME$/chauncy/coding/java/lib/lib/gson-2.8.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../external_jar/lib/asm-all-3.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../external_jar/lib/fastutil-7.0.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../external_jar/lib/jdom.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../external_jar/lib/junit-4.8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../external_jar/lib/rlpark.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../external_jar/lib/testng-6.8.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../external_jar/lib/weka.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/chauncy/coding/java/lib/lib/rlpark.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../external_jar/lib/rlpark.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Mario:jar">
+    <output-path>$PROJECT_DIR$/../../Mario</output-path>
+    <root id="archive" name="Mario.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../../Mario/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="Mario" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../external_jar/lib/commons-cli-1.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../external_jar/lib/commons-logging-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../external_jar/lib/gson-2.3.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../external_jar/lib/asm-all-3.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../external_jar/lib/fastutil-7.0.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../external_jar/lib/jdom.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../external_jar/lib/junit-4.8.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../external_jar/lib/rlpark.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../external_jar/lib/testng-6.8.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../external_jar/lib/weka.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
