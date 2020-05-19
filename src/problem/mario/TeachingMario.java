@@ -4,6 +4,7 @@ import agent.agents.EGreedyPolicy;
 import agent.agents.Policy;
 import agent.shapings.ConstantShaping;
 import agent.shapings.PotentialBasedShaping;
+import javafx.beans.binding.DoubleExpression;
 import problem.Problem;
 import problem.mario.teaching.*;
 import problem.mario.utils.DataFile;
@@ -15,15 +16,15 @@ import java.io.File;
 
 public class TeachingMario {
 
-    public static int REPEATS = 30; // 10 Curves to average
+    public static int REPEATS = 60; // 10 Curves to average
     public static int TRAIN = 50000; // Train episodes
 
     // independent will simply use independent learners whatever the STUDENT and STRATEGY are assigned.
     // teacherStudent will use STRATEGY rather than STUDENT
     // reusingAdvice will consider STRATEGY and STUDENT together.
     public static String TEACHER = "teacherS";  // Teacher algorithm
-    public static String STUDENT;  // different students: studentS (default), change, budget, decay
-    public static String STRATEGY = "adhoctd";  // baseline, advise, correct, askCorrect, adhoctd
+    public static String STUDENT;  // different students: studentS (default), change, budget, decay, margin, qChange
+    public static String STRATEGY;  // baseline, advise, correct, askCorrect, adhoctd
     public static Boolean DEBUG = true; // print log info
     public static int DEBUG_LENGTH = 3000; // print log info
     public static String DIR = "data/"+TEACHER; // Where to store data
@@ -38,16 +39,16 @@ public class TeachingMario {
 
     // params of teacher-student
     public static int BUDGET = Integer.MAX_VALUE; // Advice budget
-    public static double TQTHRESHOLD = 0;
-    public static double SQTHRESHOLD = 0;
-    public static double ASKPARAME = 2;  // lower value means higher asking prob, 2 means agent asks for advice when visit times are smaller than 30
-    public static double GIVEPARAM = 0.2;  // higher give param means higher giving prob, 1 means give advice with prob 0.5 when visit times is 10000
+    public static double TQTHRESHOLD;
+    public static double SQTHRESHOLD;
+    public static double ASKPARAME;  // lower value means higher asking prob, 2 means agent asks for advice when visit times are smaller than 30
+    public static double GIVEPARAM;  // higher give param means higher giving prob, 1 means give advice with prob 0.5 when visit times is 10000
     public static int beginEpisodes = 0;  // the episode that an agent asks for advice
 
     // params of reusing
-    public static double QTHRED = 0.03;
-    public static int REUSINGBUDGET = 0;
-    public static double DECAY = 0.9;
+    public static double QTHRED;
+    public static int REUSINGBUDGET;
+    public static double DECAY;
 
     /*
      * Results Description
@@ -84,9 +85,22 @@ public class TeachingMario {
         -m: running mode
         -s: student strategy. must be set when m = "r"
          */
-        options.addOption("m", "mode", true, "experiment mode");
-        options.addOption("s", "student", true, "student strategy");
-        options.addOption("t", "start", true, "start time");
+        options.addOption("m", "Mode", true, "experiment mode");
+        options.addOption("sty", "Strategy", true, "advising strategy"); // baseline, advise, correct, askCorrect, adhoctd
+        options.addOption("stu", "Student", true, "student type"); // baseline, advise, correct, askCorrect, adhoctd
+
+        // importance parameters
+        options.addOption("sq", "SQThreshold", true, "student q threshold of importance");
+        options.addOption("tq", "TQThreshold", true, "teacher q threshold of importance");
+
+        // adhoctd parameters
+        options.addOption("ap", "AskParam", true, "asking parameter of adhoctd");
+        options.addOption("gp", "GiveParam", true, "giving parameter of adhoctd");
+
+        // reusing parameeters
+        options.addOption("qt", "QTHRED", true, "QTHRED of QChange"); // different students: studentS (default), change, budget, decay, margin, qChange
+        options.addOption("reb", "ReBudget", true, "Reusing Budget of Budget");
+        options.addOption("de", "Decay", true, "Decay Prob of Decay");
 
         // Parse the program arguments
         CommandLine commandLine = parser.parse( options, args );
@@ -94,6 +108,7 @@ public class TeachingMario {
         if( commandLine.hasOption('m') ) {
             mode = commandLine.getOptionValue("m");
         }else{
+            System.out.println("Wrong mode!");
             System.exit(0);
         }
 
@@ -103,32 +118,138 @@ public class TeachingMario {
             startTime = Integer.parseInt(commandLine.getOptionValue("t"));
         }
 
-        // independent, teacherStudent, reusingAdvice
-        System.out.println("Mode:"+mode+"-Start:"+startTime);
-        switch (mode) {
-            case "i": train("independent", startTime); break;
-            case "t": train("teacherStudent", startTime); break;
-            case "r": {
-                String student = "";
-                if( commandLine.hasOption('s') ) {
-                    student = commandLine.getOptionValue("s");
-                }else{
+        // prepare the strategy parameters
+        if (!mode.equals("i")) {
+            String strategy = "";
+            if( commandLine.hasOption("sty") ) {
+                strategy = commandLine.getOptionValue("sty");
+            }
+
+            switch (strategy){
+                case "askCorrect": {
+                    // set tq and sq
+                    double tQThreshold = 0;
+                    if( commandLine.hasOption("tq") ) {
+                        tQThreshold = Double.parseDouble(commandLine.getOptionValue("tq"));
+                    }
+
+                    double sQThreshold = 0;
+                    if( commandLine.hasOption("sq") ) {
+                        sQThreshold = Double.parseDouble(commandLine.getOptionValue("sq"));
+                    }
+
+                    TQTHRESHOLD = tQThreshold;
+                    SQTHRESHOLD = sQThreshold;
+                    STRATEGY = strategy;
+
+                    System.out.println(STRATEGY+"-tQThreshold:"+TQTHRESHOLD+"-sQThreshold:"+SQTHRESHOLD);
+                } break;
+                case "adhoctd": {
+                    // set ap and gp
+                    double ap = 0;
+                    if( commandLine.hasOption("ap") ) {
+                        ap = Double.parseDouble(commandLine.getOptionValue("ap"));
+                    }
+
+                    double gp = 0;
+                    if( commandLine.hasOption("gp") ) {
+                        gp = Double.parseDouble(commandLine.getOptionValue("gp"));
+                    }
+
+                    ASKPARAME = ap;
+                    GIVEPARAM = gp;
+                    STRATEGY = strategy;
+
+                    System.out.println(STRATEGY+"-askParam:"+ASKPARAME+"-giveParam:"+GIVEPARAM);
+                } break;
+                default: {
+                    System.out.println("Wrong strategy!");
                     System.exit(0);
                 }
-                System.out.println("Student:"+student);
+            }
+        }
+
+        // independent, teacherStudent, reusingAdvice
+        switch (mode) {
+            case "i": {
+                System.out.println("Mode:independent-Start:"+startTime);
+                train("independent", startTime);
+            } break;
+            case "t": {
+                System.out.println("Mode:teacherStudent-Start:"+startTime);
+                train("teacherStudent", startTime);
+            } break;
+            case "r": {
+                System.out.println("Mode:reusingAdvice-Start:"+startTime);
+                String student = "";
+                if( commandLine.hasOption("stu") ) {
+                    student = commandLine.getOptionValue("stu");
+                }else{
+                    System.out.println("Wrong student!");
+                    System.exit(0);
+                }
+
                 switch (student) {
-                    case "ch": STUDENT = "change"; break;
-                    case "bu": STUDENT = "budget"; break;
-                    case "de": STUDENT = "decay"; break;
-                    case "deM": STUDENT = "margin"; break;
-                    case "deQ": STUDENT = "qChange"; break;
+                    case "ch": {
+                        STUDENT = "change";
+                        double qt = 0;
+                        if( commandLine.hasOption("qt") ) {
+                            qt = Double.parseDouble(commandLine.getOptionValue("qt"));
+                        }
+                        QTHRED = qt;
+                        System.out.println("qThred:"+QTHRED);
+                    } break;
+                    case "bu": {
+                        STUDENT = "budget";
+                        int reb = 0;
+                        if( commandLine.hasOption("reb") ) {
+                            reb = Integer.parseInt(commandLine.getOptionValue("reb"));
+                        }
+                        REUSINGBUDGET = reb;
+                        System.out.println("budget:"+REUSINGBUDGET);
+                    } break;
+                    case "de": {
+                        STUDENT = "decay";
+                        double de = 0;
+                        if( commandLine.hasOption("de") ) {
+                            de = Double.parseDouble(commandLine.getOptionValue("de"));
+                        }
+                        DECAY = de;
+                        System.out.println("decay:"+DECAY);
+                    } break;
+                    case "deM": {
+                        STUDENT = "margin";
+                        double de = 0;
+                        if( commandLine.hasOption("de") ) {
+                            de = Double.parseDouble(commandLine.getOptionValue("de"));
+                        }
+                        DECAY = de;
+                        System.out.println("margin decay:"+DECAY);
+                    } break;
+                    case "deQ": {
+                        STUDENT = "qChange";
+                        double qt = 0;
+                        if( commandLine.hasOption("qt") ) {
+                            qt = Double.parseDouble(commandLine.getOptionValue("qt"));
+                        }
+                        QTHRED = qt;
+
+                        double de = 0;
+                        if( commandLine.hasOption("de") ) {
+                            de = Double.parseDouble(commandLine.getOptionValue("de"));
+                        }
+                        DECAY = de;
+                        System.out.println("qChange decay:"+DECAY+"-qThred:"+QTHRED);
+                    } break;
                     default: STUDENT = "studentS"; break;
                 }
                 train("reusingAdvice", startTime);
             } break;
-            default: train("independent", startTime); break;
+            default: {
+                System.out.println("Mode:independent-Start:"+startTime);
+                train("independent", startTime);
+            } break;
         }
-
     }
 
 
@@ -266,7 +387,7 @@ public class TeachingMario {
 
             // Save new curve and policy
             if (new_learner.startsWith("independent")) {
-                marioLeaner.savePolicy(DIR+"/"+new_learner+"/policy"+re);
+                // marioLeaner.savePolicy(DIR+"/"+new_learner+"/policy"+re);
             }
         }
         System.out.println("Done.");
