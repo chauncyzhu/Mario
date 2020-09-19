@@ -85,6 +85,7 @@ public class TeachingMario {
         -m: running mode
         -s: student strategy. must be set when m = "r"
          */
+        options.addOption("t", "StartTime", true, "start time");
         options.addOption("m", "Mode", true, "experiment mode");
         options.addOption("sty", "Strategy", true, "advising strategy"); // baseline, advise, correct, askCorrect, adhoctd
         options.addOption("stu", "Student", true, "student type"); // baseline, advise, correct, askCorrect, adhoctd

@@ -9,9 +9,7 @@
     <list default="true" id="9807ac02-9013-4161-8d2f-eebb38a34fc2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mario/problem/mario/TeachingMario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/problem/mario/TeachingMario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/AskImportanceCorrectMistakes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mario/problem/mario/teaching/AskImportanceCorrectMistakes.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem/mario/TeachingMario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/TeachingMario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/problem/mario/teaching/AskImportanceCorrectMistakes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem/mario/teaching/AskImportanceCorrectMistakes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +37,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="mario" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -142,57 +144,56 @@
       <workItem from="1589517732534" duration="2326000" />
       <workItem from="1589592300930" duration="3063000" />
       <workItem from="1589791769589" duration="5060000" />
+      <workItem from="1589857126955" duration="779000" />
+      <workItem from="1590030626877" duration="128000" />
+      <workItem from="1590035551895" duration="10000" />
+      <workItem from="1590656186403" duration="647000" />
+      <workItem from="1590755990763" duration="1118000" />
+      <workItem from="1590757430244" duration="1104000" />
+      <workItem from="1596533795958" duration="1227000" />
+      <workItem from="1596632746337" duration="2706000" />
+      <workItem from="1597239666483" duration="764000" />
+      <workItem from="1597395569627" duration="660000" />
+      <workItem from="1600528031966" duration="377000" />
     </task>
+    <task id="LOCAL-00001" summary="run code from command">
+      <created>1589857198365</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589857198365</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="run code from command" />
+    <option name="LAST_COMMIT_MESSAGE" value="run code from command" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="371" y="131" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1588304728735">
+    <state x="238" y="0" key="CommitChangelistDialog2" timestamp="1589857195534">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="371" y="131" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.680@0.0.1280.680" timestamp="1588304728735" />
-    <state x="372" y="100" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1588304529290">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="372" y="100" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1280.680@0.0.1280.680" timestamp="1588304529289" />
-    <state x="396" y="58" key="DetectedRootsChooserDialog" timestamp="1588257132227">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="396" y="58" key="DetectedRootsChooserDialog/0.0.1280.680@0.0.1280.680" timestamp="1588257132227" />
+    <state x="238" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1589857195534" />
     <state x="421" y="98" key="FileChooserDialogImpl" timestamp="1589276955555">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="98" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1589276955555" />
-    <state width="1238" height="330" key="GridCell.Tab.0.bottom" timestamp="1588344129591">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1238" height="330" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1588344129591" />
-    <state width="1238" height="330" key="GridCell.Tab.0.center" timestamp="1588344129591">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1238" height="330" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1588344129591" />
-    <state width="1238" height="330" key="GridCell.Tab.0.left" timestamp="1588344129591">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1238" height="330" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1588344129591" />
-    <state width="1238" height="330" key="GridCell.Tab.0.right" timestamp="1588344129591">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1238" height="330" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1588344129591" />
     <state x="121" y="0" key="SettingsEditor" timestamp="1589286596251">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1589286596251" />
-    <state x="320" y="168" key="com.intellij.ide.util.TipDialog" timestamp="1589592299670">
+    <state x="233" y="76" key="Vcs.Push.Dialog.v2" timestamp="1589857200413">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="320" y="168" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1589592299670" />
-    <state x="299" y="152" key="run.anything.popup" timestamp="1588303277706">
+    <state x="233" y="76" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1589857200413" />
+    <state x="320" y="168" key="com.intellij.ide.util.TipDialog" timestamp="1597395605551">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="299" y="152" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1588303277706" />
+    <state x="320" y="168" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1597395605551" />
     <state x="303" y="2" width="672" height="678" key="search.everywhere.popup" timestamp="1589349458458">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
